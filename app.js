@@ -34,3 +34,13 @@ function activate() {
     return;
   }
 }
+
+//display email input onclick of newsletter checkbox
+function showEmailInput(){
+  const isDisplayed = document.getElementById("email");
+  if(isDisplayed.style.display === "none"){
+    isDisplayed.style.display = "block";
+  } else {
+    isDisplayed.style.display = "none";
+  };
+}

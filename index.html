@@ -22,10 +22,10 @@
       </div>
       <div class="checkbox">
         <label for="newsletter">Subscribe To My Newsletter Here:</label>
-        <input type="checkbox" name="newsletter" id="newsletter" />
+        <input type="checkbox" name="newsletter" id="newsletter" onclick="showEmailInput()" />
       </div>
       <div class="email">
-        <input type="email" value="Enter Your Email" />
+        <input type="email" id="email" value="Enter Your Email" style="display: none ;"/>
       </div>
       <input type="submit" id="submit" disabled />
     </form>
