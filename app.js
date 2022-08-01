@@ -44,3 +44,20 @@ function showEmailInput(){
     isDisplayed.style.display = "none";
   };
 }
+
+//assigning variables and making a POST request to placeholder API 
+
+function SendIt(){
+  const checkboxButton = document.getElementById("newsletter").checked;
+  const firstNameInput = document.getElementById("first-name").value;
+  const lastNameInput = document.getElementById("last-name").value;
+  const userEmail = document.getElementById("email").value;
+  const userComment = document.getElementById("comment").value;
+
+  if(checkboxButton){
+    fetch('https://jsonplaceholder.typicode.com/users', {method: 'POST', body: {firstNameInput, lastNameInput, userEmail, userComment}})
+  } else {
+    fetch('https://jsonplaceholder.typicode.com/users', {method: 'POST', body: {firstNameInput, lastNameInput, userComment}})
+  };
+  
+}
